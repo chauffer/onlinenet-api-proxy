@@ -224,9 +224,4 @@ if( !is_allowed( $CallValues['endpoint'] ) )
 
 log_to_file( $CallValues );
 
-if($CallValues['method'] == "GET")
-{
-    return call_online_api($CallValues['method'], $CallValues['endpoint'], $CallValues['values'], NULL);
-}
-
-return call_online_api($CallValues['method'], $CallValues['endpoint'], NULL, $CallValues['values']);
+return call_online_api($CallValues['method'], $CallValues['endpoint'], $CallValues['values']);
